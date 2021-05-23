@@ -279,11 +279,14 @@ function Thumbnailer:register_client()
     mp.observe_property("video-dec-params", "native", function()
         local duration = mp.get_property_native("duration")
         local max_duration = thumbnailer_options.autogenerate_max_duration
+        local min_duration = thumbnailer_options.autogenerate_min_duration
 
         if duration ~= nil and self.state.available and thumbnailer_options.autogenerate then
             -- Notify if autogenerate is on and video is not too long
-            if duration < max_duration or max_duration == 0 then
-                self:start_worker_jobs()
+            if duration <= max_duration or max_duration == 0 then
+                if duration >= min_duration or min_duraiton == 0 then
+                    self:start_worker_jobs()
+                end
             end
         end
     end)

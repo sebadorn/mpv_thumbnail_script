@@ -13,8 +13,10 @@ local thumbnailer_options = {
     -- Automatically generate the thumbnails on video load, without a keypress
     autogenerate = true,
 
-    -- Only automatically thumbnail videos shorter than this (seconds)
+    -- Only automatically thumbnail videos not longer than this (seconds)
     autogenerate_max_duration = 3600, -- 1 hour
+    -- Only automatically thumbnail videos not shorter than this (seconds)
+    autogenerate_min_duration = 30, -- 30 seconds
 
     -- SHA1-sum filenames over this length
     -- It's nice to know what files the thumbnails are (hence directory names)

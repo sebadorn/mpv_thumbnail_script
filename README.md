@@ -78,11 +78,17 @@ cache_directory=/tmp/my_mpv_thumbnails
 # Defaults to yes
 autogenerate=[yes/no]
 
-# Only automatically thumbnail videos shorter than this (in seconds)
+# Only automatically thumbnail videos not longer than this (in seconds)
 # You will have to press T (or your own keybind) to enable the thumbnail previews
 # Set to 0 to disable the check, ie. thumbnail videos no matter how long they are
 # Defaults to 3600 (one hour)
 autogenerate_max_duration=3600
+
+# Only automatically thumbnail videos not shorter than this (in seconds)
+# You will have to press T (or your own keybind) to enable the thumbnail previews
+# Set to 0 to disable the check, ie. thumbnail videos no matter how long they are
+# Defaults to 3600 (one hour)
+autogenerate_min_duration=30
 
 # Use mpv to generate thumbnail even if ffmpeg is found in PATH
 # ffmpeg is slightly faster than mpv but lacks support for ordered chapters in MKVs,
