@@ -1,5 +1,5 @@
 {
-	"output" : "mpv_thumbnail_script_server.lua",
+	"output" : "build/mpv_thumbnail_script_server.lua",
 	"files" : [
 		"src/license_blurb.lua",
 		"<version>",
