@@ -97,6 +97,7 @@ function check_output(ret, output_path, is_mpv)
         if ret.error or ret.status ~= 0 then
             msg.error("Thumbnailing command failed!")
             msg.error("mpv process error:", ret.error)
+            msg.error("mpv process status:", ret.status)
             msg.error("Process stdout:", ret.stdout)
             if is_mpv then
                 msg.error("Debug log:", log_path)
